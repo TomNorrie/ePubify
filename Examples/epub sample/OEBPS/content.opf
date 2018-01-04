@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<package unique-identifier="epubmerge-id" version="2.0" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+    <meta name="cover" content="coverimageid"/>
+    <meta content="Legendary Moonlight Sculptor - Volume 1, The" name="calibre:title_sort"/>
+    <meta content="{&quot;NAM Heesung&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+    <meta content="0.9.3" name="Sigil version"/>
+    <dc:title>The Legendary Moonlight Sculptor - Volume 1</dc:title>
+    <dc:creator opf:file-as="Heesung, NAM" opf:role="aut">NAM Heesung</dc:creator>
+    <dc:language>en</dc:language>
+    <dc:date opf:event="modification" xmlns:opf="http://www.idpf.org/2007/opf">2016-02-11</dc:date>
+  </metadata>
+  <manifest>
+    <item href="Text/cover.xhtml" id="cover" media-type="application/xhtml+xml"/>
+    <item href="Text/Title.xhtml" id="id" media-type="application/xhtml+xml"/>
+    <item href="Text/Credits.xhtml" id="Credits.xhtml" media-type="application/xhtml+xml"/>
+    <item href="Text/ToC.xhtml" id="ToC.xhtml" media-type="application/xhtml+xml"/>
+    <item href="Text/Chapter001.xhtml" id="a1content" media-type="application/xhtml+xml"/>
+    <item href="Text/Chapter002.xhtml" id="a2content" media-type="application/xhtml+xml"/>
+    <item href="Text/Chapter003.xhtml" id="a3content" media-type="application/xhtml+xml"/>
+    <item href="Text/Chapter004.xhtml" id="a4content" media-type="application/xhtml+xml"/>
+    <item href="Text/Chapter005.xhtml" id="a5content" media-type="application/xhtml+xml"/>
+    <item href="Text/Chapter006.xhtml" id="a6content" media-type="application/xhtml+xml"/>
+    <item href="Text/Chapter007.xhtml" id="a7content" media-type="application/xhtml+xml"/>
+    <item href="Text/Chapter008.xhtml" id="a8content" media-type="application/xhtml+xml"/>
+    <item href="Text/Chapter009.xhtml" id="a9content" media-type="application/xhtml+xml"/>
+    <item href="Text/Chapter010.xhtml" id="a10content" media-type="application/xhtml+xml"/>
+    <item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+    <item href="Styles/style.css" id="a7estils" media-type="text/css"/>
+    <item href="Images/cover.jpg" id="coverimageid" media-type="image/jpeg"/>
+    <item href="1/OEBPS/toc.ncx" id="a1ncx" media-type="origtocncx/xml"/>
+    <item href="10/OEBPS/toc.ncx" id="a10ncx" media-type="origtocncx/xml"/>
+    <item href="2/OEBPS/toc.ncx" id="a2ncx" media-type="origtocncx/xml"/>
+    <item href="3/OEBPS/toc.ncx" id="a3ncx" media-type="origtocncx/xml"/>
+    <item href="4/OEBPS/toc.ncx" id="a4ncx" media-type="origtocncx/xml"/>
+    <item href="5/OEBPS/toc.ncx" id="a5ncx" media-type="origtocncx/xml"/>
+    <item href="6/OEBPS/toc.ncx" id="a6ncx" media-type="origtocncx/xml"/>
+    <item href="7/OEBPS/toc.ncx" id="a7ncx" media-type="origtocncx/xml"/>
+    <item href="8/OEBPS/toc.ncx" id="a8ncx" media-type="origtocncx/xml"/>
+    <item href="9/OEBPS/toc.ncx" id="a9ncx" media-type="origtocncx/xml"/>
+    <item href="Misc/content0001.opf" id="a10rootfile" media-type="origrootfile/xml"/>
+    <item href="Misc/content0002.opf" id="a1rootfile" media-type="origrootfile/xml"/>
+    <item href="Misc/content0003.opf" id="a2rootfile" media-type="origrootfile/xml"/>
+    <item href="Misc/content0004.opf" id="a3rootfile" media-type="origrootfile/xml"/>
+    <item href="Misc/content0005.opf" id="a4rootfile" media-type="origrootfile/xml"/>
+    <item href="Misc/content0006.opf" id="a5rootfile" media-type="origrootfile/xml"/>
+    <item href="Misc/content0007.opf" id="a6rootfile" media-type="origrootfile/xml"/>
+    <item href="Misc/content0008.opf" id="a7rootfile" media-type="origrootfile/xml"/>
+    <item href="Misc/content0009.opf" id="a8rootfile" media-type="origrootfile/xml"/>
+    <item href="Misc/content0010.opf" id="a9rootfile" media-type="origrootfile/xml"/>
+    <item href="Styles/sgc-toc.css" id="sgc-toc.css" media-type="text/css"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover"/>
+    <itemref idref="id"/>
+    <itemref idref="Credits.xhtml"/>
+    <itemref idref="ToC.xhtml"/>
+    <itemref idref="a1content"/>
+    <itemref idref="a2content"/>
+    <itemref idref="a3content"/>
+    <itemref idref="a4content"/>
+    <itemref idref="a5content"/>
+    <itemref idref="a6content"/>
+    <itemref idref="a7content"/>
+    <itemref idref="a8content"/>
+    <itemref idref="a9content"/>
+    <itemref idref="a10content"/>
+  </spine>
+  <guide>
+    <reference href="Text/cover.xhtml" title="Cover" type="cover"></reference>
+    <reference href="Text/Credits.xhtml" title="Acknowledgements" type="acknowledgements"></reference>
+    <reference href="Text/ToC.xhtml" title="Table Of Contents" type="toc"></reference>
+    <reference href="Text/Title.xhtml" title="Title Page" type="title-page"></reference>
+  </guide>
+</package>

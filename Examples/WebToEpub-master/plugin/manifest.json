@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "WebToEpub",
+  "version": "0.0.0.42",
+  "default_locale": "en",
+  "icons": {
+    "128": "book128.png"
+  },
+  "permissions": [
+    "downloads",
+    "storage",
+    "tabs", 
+    "<all_urls>"
+  ],
+  "browser_action": {
+    "browser_style": false,
+    "default_title": "",
+    "default_icon": "book128.png",
+    "default_popup": "popup.html"
+  },
+  "applications": {
+    "gecko": {
+      "id": "WebToEpub@Baka-tsuki.org",
+      "strict_min_version": "52.0"
+    }
+  },
+  "minimum_chrome_version": "54"
+}

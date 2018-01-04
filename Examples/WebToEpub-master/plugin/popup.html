@@ -1,0 +1,283 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WebToEpub</title>
+    <base />
+    <style>
+        .expandedButton {
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <style>
+        body {
+        }
+
+        .scrollingtable {
+            overflow: scroll;
+            height: 300px;
+        }
+
+        table.chapterList {
+            width: 100%;
+        }
+
+        textarea.allSpace {
+            width:100%;
+            height:100%;
+            box-sizing:border-box;
+        }
+
+        section.minWidth {
+            min-width: 600px;
+        }
+    </style>
+    <section id="errorSection" class="minWidth" hidden>
+        <table id="errorSectionTable">
+            <tr>
+                <td>
+                    <button class="expandedButton" id="errorButtonOk">__MSG_button_error_OK__</button>
+                    <button class="expandedButton" id="errorButtonRetry">__MSG_button_error_Retry__</button>
+                    <button class="expandedButton" id="errorButtonCancel">__MSG_button_error_Cancel__</button>
+                </td>
+            </tr>
+            <tr id="errorMessageRow">
+                <td id="errorMessageText"><pre></pre></td>
+            </tr>
+        </table>
+    </section>
+    <section id="inputSection">
+        <table id="inputTable">
+            <tr>
+                <td>__MSG_label_Starting_URL__</td>
+                <td><input id="startingUrlInput" type="url" name="startingUrlInput" size="80" />
+                    <button id="loadAndAnalyseButton">__MSG_button_load_and_analyse__</button>
+                </td>
+            </tr>
+            <tr>
+                <td>__MSG_label_Title__</td>
+                <td><input id="titleInput" type="text" name="titleInput" size="80" /></td>
+            </tr>
+            <tr id="seriesRow" hidden>
+                <td>__MSG_label_Series__</td>
+                <td><input id="seriesNameInput" type="text" name="titleInput" size="80" /></td>
+            </tr>
+            <tr id="volumeRow" hidden>
+                <td>__MSG_label_Volume__</td>
+                <td><input id="seriesIndexInput" type="text" name="titleInput" size="80" /></td>
+            </tr>
+            <tr>
+                <td>__MSG_label_Author__</td>
+                <td><input id="authorInput" type="text" name="authorInput" size="80" /></td>
+            </tr>
+            <tr>
+                <td>__MSG_label_Language__</td>
+                <td><input id="languageInput" type="text" name="languageInput" size="80" /></td>
+            </tr>
+            <tr>
+                <td>__MSG_label_Filename__</td>
+                <td><input id="fileNameInput" type="text" name="fileNameInput" size="80" /></td>
+            </tr>
+        </table>
+        <section id="defaultParserSection" hidden>
+            <table>
+                <tr>
+                    <td>__MSG_label_Element_With_Chapter_Content__</td>
+                    <td>
+                        <select id="selectContentTag">
+                            <option value="body" selected>&lt;body&gt;</option>
+                            <option value="div">&lt;div&gt;</option>
+                            <option value="article">&lt;article&gt;</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="selectContentTagIdType">
+                            <option value="firstFound" selected>__MSG_option_First_Found__</option>
+                            <option value="classIs">__MSG_option_Class_Is__</option>
+                            <option value="classStartsWith">__MSG_option_Class_Starts_With__</option>
+                            <option value="idIs">__MSG_option_ID_Is__</option>
+                            <option value="idStartsWith">__MSG_option_ID_Starts_With__</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input id="contentTagIdentifierInput" type="text" name="contentTagIdentifierInput" size="30" value="" />
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <button id="packEpubButton" class="expandedButton">__MSG_button_Pack_EPUB__</button>
+        <progress id="fetchProgress" value=" 0" max="1"></progress>
+        <button id="advancedOptionsButton">__MSG_button_Advanced_Options__</button>
+        <section hidden id="advancedOptionsSection">
+                <table id="advancedOptionsTable">
+                    <tr id="translatorRow" hidden>
+                        <td>__MSG_label_Translator__</td>
+                        <td><input id="translatorInput" type="text" name="translatorInput" size="80" /></td>
+                    </tr>
+                    <tr id="fileAuthorAsRow" hidden>
+                        <td>__MSG_label_File_Author_as__</td>
+                        <td><input id="fileAuthorAsInput" type="text" name="fileAuthorAsInput" size="80"></td>
+                    </tr>
+                    <tr id="styleSheetRow">
+                        <td>__MSG_label_Stylesheet__</td>
+                        <td><textarea id="stylesheetInput" rows="6" cols="70"></textarea></td>
+                    </tr>
+                    <tr id="stylesheetToDefaultRow">
+                        <td></td>
+                        <td><button id="stylesheetToDefaultButton">__MSG_button_Reset_stylesheet__</button></td>
+                    </tr>
+                    <tr id="includeImageSourceUrlRow">
+                        <td><input id="includeImageSourceUrlCheckboxInput" type="checkbox" name="includeImageSourceUrlCheckboxInput" value="true"></td>
+                        <td>__MSG_label_Include_URL_of_Images__</td>
+                    </tr>
+                    <tr id="higestResolutionImagesRow" hidden>
+                        <td><input id="higestResolutionImagesCheckboxInput" type="checkbox" name="higestResolutionImagesCheckboxInput" value="true"></td>
+                        <td>__MSG_label_Fetch_Highest_Resolution_Images__</td>
+                    </tr>
+                    <tr id="unSuperScriptAlternateTranslations" hidden>
+                        <td><input id="unSuperScriptCheckboxInput" type="checkbox" name="unSuperScriptCheckboxInput" value="true"></td>
+                        <td>__MSG_label_Remove_Superscript_From_Alternate_Translations__</td>
+                    </tr>
+                    <tr id="useSvgForImages">
+                        <td><input id="useSvgForImagesInput" type="checkbox" name="useSvgForImagesInput" value="true"></td>
+                        <td>__MSG_label_Use_SVG_for_Images__</td>
+                    </tr>
+                    <tr id="advancedOptionsVisibleByDefaultRow">
+                        <td><input id="advancedOptionsVisibleByDefaultCheckbox" type="checkbox" name="advancedOptionsVisibleByDefaultCheckbox" value="true"></td>
+                        <td>__MSG_label_Advanced_Options_Visible_By_Default__</td>
+                    </tr>
+                    <tr>
+                        <td>__MSG_label_Manually_Select_Parser__</td>
+                        <td>
+                            <select id="manuallySelectParserTag" />
+                        </td>
+                    </tr>
+                    <tr id="resetRow">
+                        <td></td>
+                        <td><button id="resetButton">__MSG_button_Reset__</button></td>
+                    </tr>
+                    <tr id="writeErrorHistoryToFileRow">
+                        <td><input id="writeErrorHistoryToFileCheckbox" type="checkbox" name="writeErrorHistoryToFileCheckbox" value="false"></td>
+                        <td>__MSG_label_Write_Error_History_To_File__</td>
+                    </tr>
+                    <tr id="createEpub3FileRow">
+                        <td><input id="createEpub3Checkbox" type="checkbox" name="createEpub3Checkbox" value="false"></td>
+                        <td>__MSG_label_Create_Epub_3__</td>
+                    </tr>
+                    <tr id="chaptersPageInChapterListRow">
+                        <td><input id="chaptersPageInChapterListCheckbox" type="checkbox" name="chaptersPageInChapterListbox" value="false"></td>
+                        <td>__MSG_label_Chapters_Page_In_Chapters_List__</td>
+                    </tr>
+                    <tr id="developerStuffRow">
+                        <td>__MSG_label_Developer_Stuff__</td>
+                        <td>
+                            <input id="diagnosticsCheckBoxInput" type="checkbox" name="diagnosticsCheckBoxInput" value="false">
+                            <button id="reloadButton" hidden>__MSG_button_Reload__</button>
+                            <button id="packRawButton" hidden>__MSG_button_Pack_Raw_Chapters__</button>
+                            <button id="fetchChaptersButton" hidden>__MSG_button_Fetch_Chapters__</button>
+                            <button id="fetchImagesButton" hidden>__MSG_button_Fetch_Images__</button>
+                        </td>
+                    </tr>
+                </table>
+        </section>
+    </section>
+    <section id="testSection"></section>
+    <section hidden id="imageSection">
+        <table id="imageOptionsTable">
+            <tr id="duplicateImagesRow">
+                <td>__MSG_label_Remove_Duplicate_Images__</td>
+                <td><input id="removeDuplicateImages" type="checkbox" name="removeDuplicateImages" value="false"></td>
+            </tr>
+            <tr id="coverFromUrlRow">
+                <td>__MSG_label_Cover_from_URL__</td>
+                <td><input id="coverFromUrlCheckboxInput" type="checkbox" name="coverFromUrlCheckboxInput" value="false"></td>
+            </tr>
+        </table>
+        <div id="imagesTableDiv" class="scrollingtable">
+            <table id="imagesTable"></table>
+        </div>
+    </section>
+    <section id="coverUrlSection">
+        <table id="imageOptionsTable">
+            <tr id="CoverImageUrlRow">
+                <td>__MSG_label_Cover_Image_URL__</td>
+                <td><input id="coverImageUrlInput" type="text" name="coverImageUrlInput" size="70">
+                    <button id="clearCoverImageUrlButton">__MSG_button_Clear_Url__</button>
+                </td>
+            </tr>
+        </table>
+    </section>
+    <section id="outputSection" class="minWidth">
+        <button id="selectAllUrlsButton">__MSG_button_Select_All__</button>
+        <button id="unselectAllUrlsButton">__MSG_button_Unselect_All__</button>
+        <button id="reverseChapterUrlsOrderButton">__MSG_button_Reverse_Chapter_Urls_Order__</button>
+        <button id="editChaptersUrlsButton">__MSG_button_Edit_Chapter_Urls__</button>
+        <button id="applyChangesButton" hidden>__MSG_button_Apply_Changes__</button>
+        <table id="chapterUrlsTable" class=" chapterlist">
+            <tr>
+                <th align="left">__MSG_column_Include__</th>
+                <th align="left">__MSG_column_Title__</th>
+                <th align="left">__MSG_column_Loaded__</th>
+                <th align="left">__MSG_column_URL__</th>
+            </tr>
+        </table>
+        <div>
+            <textarea id="editChaptersUrlsInput" hidden class="allSpace" rows="20"></textarea>
+        </div>
+    </section>
+    <!-- scripts go here -->
+    <script src="js/UserPreferences.js"></script>
+    <script src="js/EpubMetaInfo.js"></script>
+    <script src="js/ErrorLog.js"></script>
+    <script src="js/Util.js"></script>
+    <script src="js/Download.js"></script>
+    <script src="js/HttpClient.js"></script>
+    <script src="js/EpubItem.js"></script>
+    <script src="js/ParserFactory.js"></script>
+    <script src="js/ImageCollector.js"></script>
+    <script src="js/Imgur.js"></script>
+    <script src="js/ChapterUrlsUI.js"></script>
+    <script src="js/Parser.js"></script>
+    <script src="js/parsers/ArchiveOfOurOwnParser.js"></script>
+    <script src="js/parsers/BakaTsukiParser.js"></script>
+    <script src="js/parsers/BlogspotParser.js"></script>
+    <script src="js/parsers/DefaultParser.js"></script>
+    <script src="js/parsers/FanFictionParser.js"></script>
+    <script src="js/parsers/FictionManiaParser.js"></script>
+    <script src="js/parsers/GravityTalesParser.js"></script>
+    <script src="js/parsers/ImgurParser.js"></script>
+    <script src="js/parsers/JaptemParser.js"></script>
+    <script src="js/parsers/KrytykalParser.js"></script>
+    <script src="js/parsers/LightNovelBastionParser.js"></script>
+    <script src="js/parsers/LnmtlParser.js"></script>
+    <script src="js/parsers/McStoriesParser.js"></script>
+    <script src="js/parsers/MuggleNetParser.js"></script>
+    <script src="js/parsers/NanodesuParser.js"></script>
+    <script src="js/parsers/NovelAllParser.js"></script>
+    <script src="js/parsers/NovelOnlineFreeParser.js"></script>
+    <script src="js/parsers/NovelPlanetParser.js"></script>
+    <script src="js/parsers/NrvnqsrParser.js"></script>
+    <script src="js/parsers/QidianParser.js"></script>
+    <script src="js/parsers/ReadLightNovelParser.js"></script>
+    <script src="js/parsers/RoyalRoadParser.js"></script>
+    <script src="js/parsers/ShikkakutranslationsParser.js"></script>
+    <script src="js/parsers/ShinsoriParser.js"></script>
+    <script src="js/parsers/UltimaguilParser.js"></script>
+    <script src="js/parsers/WordpressBaseParser.js"></script>
+    <script src="js/parsers/HellpingParser.js"></script>
+    <script src="js/parsers/WikipediaParser.js"></script>
+    <script src="js/parsers/WixParser.js"></script>
+    <script src="js/parsers/WuxiaworldParser.js"></script>
+    <script src="js/parsers/XianXiaWorldParser.js"></script>
+    <script src="js/parsers/ZenithNovelsParser.js"></script>
+    <script src="js/parsers/ZirusMusingsParser.js"></script>
+    <script src="jszip/dist/jszip.min.js"></script>
+    <script src="js/EpubItemSupplier.js"></script>
+    <script src="js/CoverImageUI.js"></script>
+    <script src="js/parsers/SonakoParser.js"></script>
+    <script src="js/EpubPacker.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

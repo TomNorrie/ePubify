@@ -1,0 +1,38 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="BookID" version="2.0">
+	<metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+		<dc:creator opf:role="aut" opf:file-as="AnmesicCat">AnmesicCat</dc:creator>
+<dc:rights> (c) AnmesicCat</dc:rights>
+		<dc:type>Web page</dc:type>
+		<dc:publisher>dotepub.com (http://dotepub.com)</dc:publisher>
+		<dc:source>http://japtem.com/lms-volume-1-chapter-9/</dc:source>
+		<dc:date>2016-02-11T08:00:00+00:00</dc:date>
+		<dc:identifier id="BookID" opf:scheme="CustomID">dotepub-9d6aadc0ffb5b698202c47344201a70b</dc:identifier>
+
+	<dc:title>Volume 1 Chapter 9 – Japtem</dc:title>
+<meta name="calibre:title_sort" content="Volume 1 Chapter 9 – Japtem"/>
+<meta name="calibre:author_link_map" content="{&quot;AnmesicCat&quot;: &quot;&quot;}"/>
+<dc:language>en</dc:language>
+<dc:identifier opf:scheme="calibre">6fad37fd-6807-43bb-ae3b-e91a30f651d3</dc:identifier>
+</metadata>
+	<manifest>
+		<item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+		<item id="estils" href="styles/dotepub.css" media-type="text/css"/>
+		<item id="logo" href="img/dotepub.png" media-type="image/png"/>
+		<item id="title" href="text/title.xhtml" media-type="application/xhtml+xml"/>
+		<item id="content" href="text/content.xhtml" media-type="application/xhtml+xml"/>
+		<item id="copy" href="text/copy.xhtml" media-type="application/xhtml+xml"/>
+
+	</manifest>
+	<spine toc="ncx">
+		<itemref idref="title" linear="yes"/>
+		<itemref idref="content" linear="yes"/>
+		<itemref idref="copy" linear="yes"/>
+	</spine>
+	<guide>
+		<reference type="title-page" title="Title Page" href="text/title.xhtml"/>
+		<reference type="text" title="Content" href="text/content.xhtml"/>
+		<reference type="copyright-page" title="Copyright" href="text/copy.xhtml"/>
+
+	</guide>
+</package>

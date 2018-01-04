@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE ncx PUBLIC "-//NISO//DTD ncx 2005-1//EN"
+ "http://www.daisy.org/z3986/2005/ncx-2005-1.dtd"><ncx version="2005-1" xmlns="http://www.daisy.org/z3986/2005/ncx/">
+  <head>
+    <meta content="" name="dtb:uid"/>
+    <meta content="1" name="dtb:depth"/>
+    <meta content="0" name="dtb:totalPageCount"/>
+    <meta content="0" name="dtb:maxPageNumber"/>
+  </head>
+  <docTitle>
+    <text>The Legendary Moonlight Sculptor - Volume 1</text>
+  </docTitle>
+  <navMap>
+    <navPoint id="navPoint-1" playOrder="1">
+      <navLabel>
+        <text>Chapter 01 - Birth of a Dark Gamer</text>
+      </navLabel>
+      <content src="Text/Chapter001.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-2" playOrder="2">
+      <navLabel>
+        <text>Chapter 02 - Wild Beast Appears</text>
+      </navLabel>
+      <content src="Text/Chapter002.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-3" playOrder="3">
+      <navLabel>
+        <text>Chapter 03 - The Instructor’s Request</text>
+      </navLabel>
+      <content src="Text/Chapter003.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-4" playOrder="4">
+      <navLabel>
+        <text>Chapter 04 - Dreadful Weed</text>
+      </navLabel>
+      <content src="Text/Chapter004.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-5" playOrder="5">
+      <navLabel>
+        <text>Chapter 05 - The Girl Who Lost Words</text>
+      </navLabel>
+      <content src="Text/Chapter005.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-6" playOrder="6">
+      <navLabel>
+        <text>Chapter 06 - Over a Barbecue</text>
+      </navLabel>
+      <content src="Text/Chapter006.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-7" playOrder="7">
+      <navLabel>
+        <text>Chapter 07 - Maestro of Battles</text>
+      </navLabel>
+      <content src="Text/Chapter007.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-8" playOrder="8">
+      <navLabel>
+        <text>Chapter 08 - The Fated Profession</text>
+      </navLabel>
+      <content src="Text/Chapter008.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-9" playOrder="9">
+      <navLabel>
+        <text>Chapter 09 - The City of Heaven</text>
+      </navLabel>
+      <content src="Text/Chapter009.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-10" playOrder="10">
+      <navLabel>
+        <text>Chapter 10 - Weed’s Role in the Punitive Force</text>
+      </navLabel>
+      <content src="Text/Chapter010.xhtml"/>
+    </navPoint>
+  </navMap>
+</ncx>

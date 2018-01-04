@@ -1,0 +1,309 @@
+{
+	"__MSG_button_Advanced_Options__": {
+		"message": "Advanced Options",
+		"description": "Label on button to toggle showing 'Advanced Options'"
+	},
+	"__MSG_button_Apply_Changes__": {
+		"message": "Apply Changes",
+		"description": "Label on button to end manually editing list of URLs to fetch"
+	},
+	"__MSG_button_Clear_Url__": {
+		"message": "Clear URL",
+		"description": "Label on button to erase the Cover Image URL text"
+	},
+	"__MSG_button_Edit_Chapter_Urls__": {
+		"message": "Edit Chapter URLs",
+		"description": "Label on button to allow manually editing list of URLs to fetch"
+	},
+	"__MSG_button_error_Cancel__": {
+		"message": "Cancel",
+		"description": "Label on 'Cancel' button when show error"
+	},
+	"__MSG_button_error_OK__": {
+		"message": "OK",
+		"description": "Label on 'OK' button when show error"
+	},
+	"__MSG_button_error_Retry__": {
+		"message": "Retry",
+		"description": "Label on 'Retry' button when show error"
+	},
+	"__MSG_button_Fetch_Chapters__": {
+		"message": "Fetch Chapters",
+		"description": "Label on 'Fetch Chapters' button under 'Developer Stuff'"
+	},
+	"__MSG_button_Fetch_Images__": {
+		"message": "Fetch Images",
+		"description": "Label on 'Fetch Images' button under 'Developer Stuff'"
+	},
+	"__MSG_button_load_and_analyse__": {
+		"message": "Load and Analyse",
+		"description": "Label on button to try loading url given by 'Starting URL'"
+	},
+	"__MSG_button_Pack_EPUB__": {
+		"message": "Pack EPUB",
+		"description": "Label on button to create the EPUB"
+	},
+	"__MSG_button_Pack_Raw_Chapters__": {
+		"message": "Pack Raw Chapters",
+		"description": "Label on 'Pack Raw Chapters' button under 'Developer Stuff'"
+	},
+	"__MSG_button_Reset__": {
+		"message": "Reset",
+		"description": "Label on button that clears the dialog"
+	},
+	"__MSG_button_Reload__": {
+		"message": "Reload",
+		"description": "Label on 'Reload' button under 'Developer Stuff'"
+	},
+	"__MSG_button_Reset_stylesheet__": {
+		"message": "Reset stylesheet to default",
+		"description": "Label on button to remove all changes to stylesheet and set to default value"
+	},
+	"__MSG_button_Reverse_Chapter_Urls_Order__": {
+		"message": "Reverse Chapter URLs Order",
+		"description": "Label on button to change order of chapters from last to first"
+	},
+	"__MSG_button_Select_All__": {
+		"message": "Select All",
+		"description": "Label on button to set all chapters to selected"
+	},
+	"__MSG_button_Unselect_All__": {
+		"message": "Unselect All",
+		"description": "Label on button to unselect all chapters"
+	},
+	"__MSG_column_Include__": {
+		"message": "Include?",
+		"description": "The 'include this chapter' checkbox column in the table of chapters."
+	},
+	"__MSG_column_Loaded__": {
+		"message": "Loaded?",
+		"description": "The 'has chapter been loaded?' column in the table of chapters."
+	},
+	"__MSG_column_Title__": {
+		"message": "Title",
+		"description": "The 'name of chapter' column in the table of chapters."
+	},
+	"__MSG_column_URL__": {
+		"message": "URL",
+		"description": "The 'URL to get chapter frorm' column in the table of chapters."
+	},
+	"__MSG_label_Advanced_Options_Visible_By_Default__": {
+		"message": "Advanced Options Visible by Default",
+		"description": "Label for checkbox to make Advanced Options visible when UI opens"
+	},
+	"__MSG_label_Author__": {
+		"message": "Author",
+		"description": "Label in front input for novel's Author"
+	},
+	"__MSG_label_Chapters_Page_In_Chapters_List__": {
+		"message": "Add Page with Chapters to Chapters List",
+		"description": "Label for checkbox to toggle adding the page with chapters to list of pages to fetch"
+	},
+	"__MSG_label_Cover_from_URL__": {
+		"message": "Cover from URL:",
+		"description": "Label for checkbox to toggle between picking cover image from list or with a URL"
+	},
+	"__MSG_label_Cover_Image_URL__": {
+		"message": "Cover Image URL:",
+		"description": "Label for input to give cover image as URL"
+	},
+	"__MSG_label_Create_Epub_3__": {
+		"message": "Create EPUB 3",
+		"description": "Label for checkbox to choose between EPUB 2 and 3"
+	},
+	"__MSG_label_File_Author_as__": {
+		"message": "File Author as",
+		"description": "Label in front of input for author's name should be filed (in Advanced settings)."
+	},
+	"__MSG_label_Element_With_Chapter_Content__": {
+		"message": "Element with Chapter Content:",
+		"description": "Label in front input for type of element holding each chapter's content"
+	},
+	"__MSG_label_Filename__": {
+		"message": "Filename",
+		"description": "Label in front input for file to save EPUB as"
+	},
+	"__MSG_label_Developer_Stuff__": {
+		"message": "Developer Stuff:",
+		"description": "Label for checkbox to show/hide buttons for developer testing (in Advanced settings)."
+	},
+	"__MSG_label_Fetch_Highest_Resolution_Images__": {
+		"message": "Fetch Highest Resolution Images",
+		"description": "Label for checkbox to get EPUB to include highest resolution images available (in Advanced settings)."
+	},
+	"__MSG_label_Include_URL_of_Images__": {
+		"message": "Include URL of Images",
+		"description": "Label for checkbox to record source URL of images into EPUB (in Advanced settings)."
+	},
+	"__MSG_label_Language__": {
+		"message": "Language",
+		"description": "Label in front input for language EPUB will be in"
+	},
+	"__MSG_label_Manually_Select_Parser__": {
+		"message": "Manually Select Parser:",
+		"description": "Label for menu to change parser (in advanced options section)"
+	},
+	"__MSG_label_Remove_Duplicate_Images__": {
+		"message": "Remove Duplicate Images:",
+		"description": "Label for checkbox to remove duplicate images from gallery (in cover images section)"
+	},
+	"__MSG_label_Remove_Superscript_From_Alternate_Translations__": {
+		"message": "Remove superscript from alternate translations",
+		"description": "Label for checkbox to convert superscripted alternate translations into inline text"
+	},
+	"__MSG_label_Series__": {
+		"message": "Series",
+		"description": "Label in front input for series Novel is part of"
+	},
+	"__MSG_label_Starting_URL__": {
+		"message": "Starting URL",
+		"description": "Label in front of 'URL' input"
+	},
+	"__MSG_label_Stylesheet__": {
+		"message": "Stylesheet:",
+		"description": "Label in front of edit field for setting the stylesheet (in Advanced settings)."
+	},
+	"__MSG_label_Title__": {
+		"message": "Title",
+		"description": "Label in front of input for Novel's title."
+	},
+	"__MSG_label_Translator__": {
+		"message": "Translator",
+		"description": "Label in front of input for Translator (in Advanced settings)."
+	},
+	"__MSG_label_Use_SVG_for_Images__": {
+		"message": "Use <svg> for images",
+		"description": "Label in front of checkbox to choose between <img> and <svg> elements for images."
+	},
+	"__MSG_label_Volume__": {
+		"message": "Volume",
+		"description": "Label in front of input for novel's position in series."
+	},
+	"__MSG_label_Write_Error_History_To_File__": {
+		"message": "Write error messages to file",
+		"description": "Label for checkbox to write recent error messages to file"
+	},
+	"__MSG_option_Class_Is__": {
+		"message": "Class is",
+		"description": "Content is element of specified class."
+	},
+	"__MSG_option_Class_Starts_With__": {
+		"message": "Class Starts With",
+		"description": "Content is element having a class name starting with."
+	},
+	"__MSG_option_First_Found__": {
+		"message": "First Found",
+		"description": "Content is first element of specified type found."
+	},
+	"__MSG_option_ID_Is__": {
+		"message": "ID is",
+		"description": "Content is element with specified ID."
+	},
+	"__MSG_option_ID_Starts_With__": {
+		"message": "ID Starts With",
+		"description": "Content is element having an ID starting with."
+	},
+	"convertToXhtmlWarning": {
+		"message": "Warning, unable to convert chapter '$chapter$' from '$url$' to valid XHTML. Your epub viewer may fail when viewing that chapter. You may need to fix the chapter manually with Calibre.",
+		"description": "Warning message when try to fetch an image and instead get HTML",
+		"placeholders": {
+			"chapter": {
+			    "content": "$1"
+			},
+			"url": {
+			    "content": "$2"
+			}
+		}
+	},
+	"defaultAuthor": {
+		"message": "No author supplied",
+		"description": "Default author value to use when one is not supplied"
+	},
+	"defaultTitle": {
+		"message": "No title supplied",
+		"description": "Default UUID value to use when one is not supplied"
+	},
+	"defaultUUID": {
+		"message": "No UUID supplied",
+		"description": "Default UUID value to use when one is not supplied"
+	},
+	"errorContentNotFound": {
+		"message": "Could not find content element for web page '$url$'.",
+		"description": "Warning message when can't find content element for a web page",
+		"placeholders": {
+			"url": {
+			    "content": "$1"
+			}
+		}
+	},
+	"errorIllegalFileName": {
+		"message": "Filename '$filename$' must not contain the following characters: $illegalCharacters$",
+		"description": "Warning message when filename isn't legal",
+		"placeholders": {
+			"filename": {
+			    "content": "$1"
+			},
+			"illegalCharacters": {
+			    "content": "$2"
+			}
+		}
+	},
+	"gotHtmlExpectedImageWarning": {
+		"message": "Fetch of URL '$url$' returned HTML, expected an image.",
+		"description": "Warning message when try to fetch an image and instead get HTML",
+		"placeholders": {
+			"url": {
+			    "content": "$1"
+			}
+		}
+	},
+	"htmlFetchFailed": {
+		"message": "Fetch of URL '$url$' failed with network error $err$.",
+		"description": "Error message when fetch of a web page fails.",
+		"placeholders": {
+			"url": {
+			    "content": "$1"
+			},
+			"err": {
+			    "content": "$2"
+			}
+		}
+	},
+	"noChaptersFound": {
+		"message": "No chapters found. This may not be the novel's detail page.",
+		"description": "Warning message when parser can't find list of chapters."
+	},
+	"noChaptersFoundAndFetchClicked": {
+		"message": "No chapters found.",
+		"description": "Warning message.  Developer has clicked 'Fetch Chapters' when there are none."
+	},
+	"noImagesFound": {
+		"message": "No images found.",
+		"description": "Warning message.  Developer has clicked 'Fetch Images' when there are none."
+	},
+	"noImagesFoundLabel": {
+		"message": "No images found",
+		"description": "Text put in images table when no images are found."
+	},
+	"noParserFound": {
+		"message": "No parser found for this URL.  Default parser will be used.  You will need to specify how to obtain content for each chapter.",
+		"description": "Warning message when can't figure out how to extract info from web page."
+	},
+	"setCover": {
+		"message": "Set Cover",
+		"description": "Label for checkboxes used to select the cover image."
+	},
+	"unhandledFieldTypeError": {
+		"message": "ERROR: Unhandled field type.",
+		"description": "Internal message for developer."
+	},
+	"warningNoVisibleContent": {
+		"message": "Warning, content element for web page '$url$' has no visible content.",
+		"description": "Warning message when content element for a page has nothing viewable",
+		"placeholders": {
+			"url": {
+			    "content": "$1"
+			}
+		}
+	}
+}

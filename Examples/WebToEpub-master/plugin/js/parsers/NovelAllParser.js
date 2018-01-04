@@ -1,0 +1,46 @@
+/*
+  Parser for www.novelall.com
+*/
+"use strict";
+
+parserFactory.register("novelall.com", function() { return new NovelAllParser() });
+
+class NovelAllParser extends Parser{
+    constructor() {
+        super();
+    }
+
+    getChapterUrls(dom) {
+        let menuItems = [...dom.querySelectorAll("ul.detail-chlist a")];
+        return Promise.resolve(this.buildChapterList(menuItems));
+    };
+
+    buildChapterList(menuItems) {
+        return menuItems.reverse().map(
+           a => ({sourceUrl: a.href, title: a.getAttribute("title")})
+       );
+    };
+    
+    findContent(dom) {
+        return dom.querySelector("div.reading-box");
+    };
+
+    extractAuthor(dom) {
+        let link = dom.querySelector("a[href*='author']");
+        return (link == null) ? super.extractAuthor(dom) : link.textContent;
+    };
+
+    // title of the story
+    extractTitle(dom) {
+        return dom.querySelector("h1").textContent;
+    };
+
+    // individual chapter titles are not inside the content element
+    findChapterTitle(dom) {
+        return dom.querySelector("h1");
+    }
+
+    findCoverImageUrl(dom) {
+        return util.getFirstImgSrc(dom, "div.manga-detailtop");
+    }
+}

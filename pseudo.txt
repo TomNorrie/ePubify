@@ -1,0 +1,8 @@
+
+input a ToC url
+
+then need to make a list of links to all chapters based on the ToC's format
+
+then for each link, need to determine it's title and .xhtml content based on website's format
+
+build ebook

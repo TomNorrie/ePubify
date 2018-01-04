@@ -1,0 +1,82 @@
+					==== EPUBIFY ====
+
+===========================================================
+Intended Use
+===========================================================
+
+Input Webnovel ToC as url
+
+If url is on a supported website
+	convert it to an epub
+Else
+	state that website is not supported
+	ask if user would like to attempt epubifying anyway
+	If yes
+		epubify
+	Else
+		exit
+
+===========================================================
+How it Works
+===========================================================
+
+The main point is to create an Ebook object then call Ebook.make_epub() on it. 
+
+-----------------------------------------------------------
+
+Outline of an Ebook's attributes
+
+EBOOK:
+	bookID
+	bookTitle
+	bookAuthor
+	bookPublisher
+	chapters
+	pages
+
+The book ID is a quirk of the epub format, and is *supposed* to be unique to every book
+Title, author, and publisher are some of the obvious metadata bits you'd expect to see (I should change these to a dict to make them dynamic)
+
+chapters and pages are both lists of Chapter and Page objects respectively (really chapter should be an extension of the page object, but not implemented at this time)
+
+-----------------------------------------------------------
+
+As for Chapter and Page objects:
+
+CHAPTER:
+	baseID
+	title
+	content
+	fillID
+	path
+	ID
+
+PAGE:
+	ID
+	content
+
+baseID is a hackey way of keeping track of which chapter is which (numerically), using a class var and method that assigns the current value of "classID" to a particular instances baseID, and then increments the classID. So the first chapter created in a run of the program would have baseID 1, the next 2, etc...
+
+Title is the text title of the chapter
+
+Content is the html content of the chapter itself, and it should, by the time it's associated with a Chapter object, be in its final, e-reader compatible state.
+
+fillID is just the baseID padded with leading 0's. This is used to maintain the lexicographic order in the chapter's filenames later on 
+
+The path is another shortcut attribute to make the code more readable later by prespecifying the exact path of the chapter in the final epub
+
+The ID is another shortcut string for ease of processing later on. It's attached as an html attribute to chapter references
+
+-----------------------------------------------------------
+
+===========================================================
+WIP/Notes
+===========================================================
+
+Need a Driver class to handle interaction with the user and validating inputs
+
+The Driver class should take the input URL, and create a WebNovel object
+
+This WebNovel should depend on the website the ebook is hosted on, as the WebNovel will implement the methods used to build the Ebook object
+
+The Ebook object is already finished for plaintext only webnovels.
